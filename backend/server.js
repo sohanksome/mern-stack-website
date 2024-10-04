@@ -8,7 +8,7 @@ import productRoutes from "./routes/product.route.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
@@ -21,7 +21,7 @@ if(process.env.NODE_ENV === "production") {
 
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-    });
+    })
 } 
 
 app.listen(5000, () => {
